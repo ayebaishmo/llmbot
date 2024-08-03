@@ -1,13 +1,12 @@
 # Here we are using the tranfoemrs to access the model 
 from transformers import AlbertTokenizer, AlbertForSequenceClassification, AlbertModel
+def load_albert(model_path):
+    model = AlbertForSequenceClassification.from_pretrained(model_path)
+    tokenizer = AlbertTokenizer.from_pretrained(model_path)
+    return model, tokenizer
 
-model_path = 'C:/Users/ISHMO_CT/Downloads/Bloomtech/llmbot/chatbot/albert-base-v2'
 
-#load the model
-model = AlbertForSequenceClassification.from_pretrained(model_path)
 
-#load the tokenizer
-tokenizer = AlbertTokenizer.from_pretrained(model_path)  
 
 
 
